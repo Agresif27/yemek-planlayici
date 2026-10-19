@@ -14,6 +14,11 @@ class Item {
   factory Item.fromJson(Map<String, dynamic> j) => Item(
         j['name'], j['emoji'], j['cat'], j['unit'], (j['price'] as num).toDouble(),
         meat: j['meat'] ?? false, animal: j['animal'] ?? false);
+
+  Map<String, dynamic> toJson() => {
+        'name': name, 'emoji': emoji, 'cat': cat, 'unit': unit, 'price': price,
+        'meat': meat, 'animal': animal,
+      };
 }
 
 class Recipe {
@@ -28,6 +33,13 @@ class Recipe {
         j['id'], j['name'], j['emoji'], j['minutes'], List<int>.from(j['meals']),
         {for (final e in (j['ing'] as Map<String, dynamic>).entries) e.key: (e.value as num).toDouble()},
         List<String>.from(j['steps']));
+
+  Map<String, dynamic> toJson() => {
+        'id': id, 'name': name, 'emoji': emoji, 'minutes': minutes, 'meals': meals,
+        'ing': ing, 'steps': steps,
+      };
+
+  bool get isCustom => id.startsWith('ozel-');
 }
 
 const mealNames = ['Kahvaltı', 'Öğle', 'Akşam'];
@@ -49,6 +61,12 @@ Map<String, Item> items = {};
 List<Item> allItems = [];
 List<Recipe> recipes = [];
 int catalogVersion = 0;
+
+/// Kullanıcının kendi eklediği ürün ve tarifler; katalog güncellense de korunur.
+List<Item> customItems = [];
+List<Recipe> customRecipes = [];
+List<Item> _baseItems = [];
+List<Recipe> _baseRecipes = [];
 
 class _Parsed {
   final int version;
@@ -82,10 +100,28 @@ class Catalog {
     final p = _parse(raw);
     if (p == null || p.version <= catalogVersion) return false;
     catalogVersion = p.version;
-    allItems = p.items;
-    items = {for (final i in p.items) i.name: i};
-    recipes = p.recipes;
+    _baseItems = p.items;
+    _baseRecipes = p.recipes;
+    rebuild();
     return true;
+  }
+
+  /// Katalog + kullanıcı verisini birleştirir. Katalogdaki aynı adlı ürün önceliklidir.
+  static void rebuild() {
+    final baseNames = _baseItems.map((i) => i.name).toSet();
+    allItems = [..._baseItems, ...customItems.where((i) => !baseNames.contains(i.name))];
+    items = {for (final i in allItems) i.name: i};
+    final baseIds = _baseRecipes.map((r) => r.id).toSet();
+    recipes = [
+      ..._baseRecipes,
+      ...customRecipes.where((r) => !baseIds.contains(r.id) && r.ing.keys.every(items.containsKey)),
+    ];
+  }
+
+  static void setCustom(List<Item> its, List<Recipe> rs) {
+    customItems = its;
+    customRecipes = rs;
+    rebuild();
   }
 
   /// Paketteki katalog + (varsa) daha yeni indirilmiş katalog.

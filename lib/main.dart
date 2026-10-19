@@ -3,12 +3,8 @@ import 'package:flutter/services.dart';
 
 import 'app_state.dart';
 import 'data.dart';
-
-const _days = ['Pazartesi', 'Salı', 'Çarşamba', 'Perşembe', 'Cuma', 'Cumartesi', 'Pazar'];
-
-final state = AppState();
-final tabIndex = ValueNotifier<int>(0);
-final messengerKey = GlobalKey<ScaffoldMessengerState>();
+import 'recipes_page.dart';
+import 'ui.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -24,8 +20,7 @@ Future<void> main() async {
   Catalog.refresh().then((updated) {
     if (!updated) return;
     state.reconcile();
-    messengerKey.currentState?.showSnackBar(SnackBar(
-        content: Text('Tarif kataloğu güncellendi: ${recipes.length} tarif')));
+    toast('Tarif kataloğu güncellendi: ${recipes.length} tarif');
   });
 }
 
@@ -51,19 +46,6 @@ class YemekApp extends StatelessWidget {
       );
 }
 
-String fmtQty(Item it, double q) {
-  if (it.unit == 'adet') {
-    final r = (q * 2).ceil() / 2;
-    return '${r == r.roundToDouble() ? r.toInt() : r} adet';
-  }
-  if (q >= 1000) {
-    final s = (q / 1000).toStringAsFixed(1).replaceAll(RegExp(r'\.0$'), '');
-    return '$s ${it.unit == 'g' ? 'kg' : 'L'}';
-  }
-  final step = q >= 50 ? 10 : 1;
-  return '${(q / step).round() * step} ${it.unit}';
-}
-
 class Home extends StatefulWidget {
   const Home({super.key});
 
@@ -75,7 +57,7 @@ class _HomeState extends State<Home> {
   @override
   void initState() {
     super.initState();
-    tabIndex.value = state.onboarded ? 0 : 3;
+    tabIndex.value = state.onboarded ? 0 : 4;
   }
 
   @override
@@ -85,7 +67,7 @@ class _HomeState extends State<Home> {
       );
 
   Widget _scaffold(int tab) {
-    const pages = [PlanPage(), PantryPage(), ShoppingPage(), PrefsPage()];
+    const pages = [PlanPage(), RecipesPage(), PantryPage(), ShoppingPage(), PrefsPage()];
     return Scaffold(
       body: SafeArea(child: pages[tab]),
       bottomNavigationBar: NavigationBar(
@@ -93,6 +75,7 @@ class _HomeState extends State<Home> {
         onDestinationSelected: (i) => tabIndex.value = i,
         destinations: const [
           NavigationDestination(icon: Icon(Icons.calendar_month), label: 'Plan'),
+          NavigationDestination(icon: Icon(Icons.menu_book), label: 'Tarifler'),
           NavigationDestination(icon: Icon(Icons.kitchen), label: 'Evde Var'),
           NavigationDestination(icon: Icon(Icons.shopping_cart), label: 'Liste'),
           NavigationDestination(icon: Icon(Icons.tune), label: 'Tercihler'),
@@ -101,14 +84,6 @@ class _HomeState extends State<Home> {
     );
   }
 }
-
-Widget _title(BuildContext c, String t, {List<Widget> actions = const []}) => Padding(
-      padding: const EdgeInsets.fromLTRB(16, 12, 8, 4),
-      child: Row(children: [
-        Expanded(child: Text(t, style: Theme.of(c).textTheme.headlineSmall)),
-        ...actions,
-      ]),
-    );
 
 // ---------------------------------------------------------------- Plan
 
@@ -121,7 +96,7 @@ class PlanPage extends StatelessWidget {
         builder: (context, _) {
           final hasPlan = state.plan.any((e) => e != null);
           return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            _title(context, 'Haftalık Plan', actions: [
+            pageTitle(context, 'Haftalık Plan', actions: [
               if (hasPlan)
                 IconButton(
                   tooltip: 'Yeniden oluştur',
@@ -147,9 +122,8 @@ class PlanPage extends StatelessWidget {
                         label: const Text('Plan oluştur'),
                         onPressed: () {
                           state.generatePlan();
-                          if (!state.plan.any((e) => e != null) && context.mounted) {
-                            ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-                                content: Text('Tercihlerine uygun tarif bulunamadı.')));
+                          if (!state.plan.any((e) => e != null)) {
+                            toast('Tercihlerine uygun tarif bulunamadı.');
                           }
                         },
                       ),
@@ -187,7 +161,7 @@ class PlanPage extends StatelessWidget {
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Padding(
             padding: const EdgeInsets.fromLTRB(16, 4, 16, 0),
-            child: Text(_days[day],
+            child: Text(days[day],
                 style: Theme.of(context)
                     .textTheme
                     .titleMedium
@@ -206,7 +180,8 @@ class PlanPage extends StatelessWidget {
       return ListTile(
         dense: true,
         leading: Text(mealEmojis[meal], style: const TextStyle(fontSize: 22)),
-        title: Text('${mealNames[meal]}: uygun tarif yok'),
+        title: Text('${mealNames[meal]}: boş'),
+        subtitle: const Text('Tarifler sekmesinden ekleyebilirsin'),
       );
     }
     final r = state.recipe(id);
@@ -222,7 +197,7 @@ class PlanPage extends StatelessWidget {
       trailing: done
           ? const Icon(Icons.check_circle, color: Colors.green)
           : const Icon(Icons.chevron_right),
-      onTap: () => _showRecipe(context, slot),
+      onTap: () => showRecipeSheet(context, slot: slot),
     );
   }
 
@@ -240,233 +215,252 @@ class PlanPage extends StatelessWidget {
     );
     if (ok == true) state.generatePlan();
   }
-
-  void _showRecipe(BuildContext context, int slot) {
-    showModalBottomSheet(
-      context: context,
-      isScrollControlled: true,
-      showDragHandle: true,
-      builder: (c) => ListenableBuilder(
-        listenable: state,
-        builder: (c, _) {
-          final r = state.recipe(state.plan[slot]!);
-          final done = state.done.contains(slot);
-          return DraggableScrollableSheet(
-            expand: false,
-            initialChildSize: 0.8,
-            maxChildSize: 0.95,
-            builder: (c, ctrl) => ListView(
-              controller: ctrl,
-              padding: const EdgeInsets.fromLTRB(20, 0, 20, 24),
-              children: [
-                Text('${r.emoji} ${r.name}', style: Theme.of(c).textTheme.headlineSmall),
-                Text('${_days[slot ~/ 3]} ${mealNames[slot % 3].toLowerCase()} · ${r.minutes} dk · ${state.people} kişilik'),
-                const SizedBox(height: 16),
-                Text('Malzemeler', style: Theme.of(c).textTheme.titleMedium),
-                for (final e in r.ing.entries)
-                  ListTile(
-                    dense: true,
-                    contentPadding: EdgeInsets.zero,
-                    leading: Text(items[e.key]!.emoji),
-                    title: Text(e.key),
-                    trailing: Text(fmtQty(items[e.key]!, e.value * state.people)),
-                    subtitle: state.owned.contains(e.key) ? const Text('evde var') : null,
-                  ),
-                const SizedBox(height: 12),
-                Text('Yapılışı', style: Theme.of(c).textTheme.titleMedium),
-                for (var i = 0; i < r.steps.length; i++)
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 4),
-                    child: Text('${i + 1}. ${r.steps[i]}'),
-                  ),
-                const SizedBox(height: 20),
-                Row(children: [
-                  Expanded(
-                    child: OutlinedButton.icon(
-                      icon: const Icon(Icons.swap_horiz),
-                      label: const Text('Değiştir'),
-                      onPressed: () => _swap(c, slot),
-                    ),
-                  ),
-                  const SizedBox(width: 12),
-                  Expanded(
-                    child: FilledButton.icon(
-                      icon: Icon(done ? Icons.undo : Icons.check),
-                      label: Text(done ? 'Geri al' : 'Yaptım'),
-                      onPressed: () async {
-                        if (done) {
-                          state.unmarkDone(slot);
-                          return;
-                        }
-                        final rating = await _askRating(c);
-                        if (rating == null) return;
-                        state.markDone(slot, rating);
-                        if (c.mounted) Navigator.pop(c);
-                      },
-                    ),
-                  ),
-                ]),
-              ],
-            ),
-          );
-        },
-      ),
-    );
-  }
-
-  Future<int?> _askRating(BuildContext context) => showDialog<int>(
-        context: context,
-        builder: (c) => AlertDialog(
-          title: const Text('Nasıldı?'),
-          content: const Text('Cevabın sonraki önerileri iyileştirir.'),
-          actions: [
-            TextButton(onPressed: () => Navigator.pop(c, 0), child: const Text('Atla')),
-            TextButton(onPressed: () => Navigator.pop(c, -1), child: const Text('👎 Beğenmedim')),
-            FilledButton(onPressed: () => Navigator.pop(c, 1), child: const Text('👍 Beğendim')),
-          ],
-        ),
-      );
-
-  void _swap(BuildContext context, int slot) {
-    final alts = state.alternatives(slot % 3);
-    showDialog(
-      context: context,
-      builder: (c) => SimpleDialog(
-        title: const Text('Başka yemek seç'),
-        children: [
-          SizedBox(
-            width: double.maxFinite,
-            height: 380,
-            child: ListView(children: [
-              for (final r in alts)
-                ListTile(
-                  leading: Text(r.emoji, style: const TextStyle(fontSize: 24)),
-                  title: Text(r.name),
-                  subtitle: Text(state.missingCount(r) == 0
-                      ? 'her şey evde'
-                      : '${state.missingCount(r)} malzeme eksik'),
-                  selected: state.plan[slot] == r.id,
-                  onTap: () {
-                    state.setRecipe(slot, r.id);
-                    Navigator.pop(c);
-                  },
-                ),
-            ]),
-          ),
-        ],
-      ),
-    );
-  }
 }
 
 // ---------------------------------------------------------------- Evde Var
 
-class PantryPage extends StatelessWidget {
+class PantryPage extends StatefulWidget {
   const PantryPage({super.key});
 
   @override
-  Widget build(BuildContext context) => ListenableBuilder(
-        listenable: state,
-        builder: (context, _) => ListView(
-          padding: const EdgeInsets.only(bottom: 16),
-          children: [
-            _title(context, 'Evde Neler Var?'),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: Row(children: [
-                Expanded(child: Text('${state.owned.length} malzeme seçili')),
-                FilledButton.tonalIcon(
-                  icon: const Icon(Icons.bolt),
-                  label: const Text('Sık kullanılanları seç'),
-                  onPressed: state.selectCommon,
-                ),
-              ]),
-            ),
-            for (final cat in categories) ...[
-              Padding(
-                padding: const EdgeInsets.fromLTRB(16, 16, 16, 4),
-                child: Text(cat, style: Theme.of(context).textTheme.titleMedium),
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 12),
-                child: Wrap(spacing: 8, children: [
-                  for (final it in allItems.where((i) => i.cat == cat))
-                    FilterChip(
-                      label: Text('${it.emoji} ${it.name}'),
-                      selected: state.owned.contains(it.name),
-                      onSelected: (_) => state.toggleOwned(it.name),
-                    ),
-                ]),
-              ),
-            ],
-          ],
-        ),
-      );
+  State<PantryPage> createState() => _PantryPageState();
 }
 
-// ---------------------------------------------------------------- Liste
+class _PantryPageState extends State<PantryPage> {
+  String q = '';
 
-class ShoppingPage extends StatelessWidget {
-  const ShoppingPage({super.key});
+  Future<void> _add({String name = ''}) async {
+    final it = await showAddItemDialog(context, initialName: name);
+    if (it != null) state.toggleOwned(it.name); // eklenen ürün evde var sayılır
+  }
+
+  Future<void> _confirmRemove(Item it) async {
+    final ok = await showDialog<bool>(
+      context: context,
+      builder: (c) => AlertDialog(
+        title: const Text('Ürün silinsin mi?'),
+        content: Text('"${it.name}" senin eklediğin bir ürün. Listeden kaldırılacak.'),
+        actions: [
+          TextButton(onPressed: () => Navigator.pop(c, false), child: const Text('Vazgeç')),
+          FilledButton(onPressed: () => Navigator.pop(c, true), child: const Text('Sil')),
+        ],
+      ),
+    );
+    if (ok == true && !state.removeCustomItem(it.name)) {
+      toast('"${it.name}" kendi tariflerinden birinde kullanılıyor, önce o tarifi sil.');
+    }
+  }
 
   @override
   Widget build(BuildContext context) => ListenableBuilder(
         listenable: state,
         builder: (context, _) {
-          final list = state.shopping;
+          final shown = allItems.where((i) => q.trim().isEmpty || matches(i.name, q)).toList();
+          return ListView(
+            padding: const EdgeInsets.only(bottom: 16),
+            children: [
+              pageTitle(context, 'Evde Neler Var?', actions: [
+                IconButton(
+                  tooltip: 'Ürün ekle',
+                  icon: const Icon(Icons.add),
+                  onPressed: _add,
+                ),
+              ]),
+              SearchBox(hint: 'Ürün ara', onChanged: (v) => setState(() => q = v)),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                child: Row(children: [
+                  Expanded(child: Text('${state.owned.length} malzeme seçili')),
+                  FilledButton.tonalIcon(
+                    icon: const Icon(Icons.bolt),
+                    label: const Text('Sık kullanılanları seç'),
+                    onPressed: state.selectCommon,
+                  ),
+                ]),
+              ),
+              if (shown.isEmpty)
+                Padding(
+                  padding: const EdgeInsets.all(24),
+                  child: Column(children: [
+                    const Text('Eşleşen ürün yok'),
+                    TextButton.icon(
+                      icon: const Icon(Icons.add),
+                      label: Text('Yeni ürün ekle: "${q.trim()}"'),
+                      onPressed: () => _add(name: q.trim()),
+                    ),
+                  ]),
+                ),
+              for (final cat in categories)
+                if (shown.any((i) => i.cat == cat)) ...[
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(16, 16, 16, 4),
+                    child: Text(cat, style: Theme.of(context).textTheme.titleMedium),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 12),
+                    child: Wrap(spacing: 8, children: [
+                      for (final it in shown.where((i) => i.cat == cat))
+                        GestureDetector(
+                          onLongPress: customItems.any((c) => c.name == it.name)
+                              ? () => _confirmRemove(it)
+                              : null,
+                          child: FilterChip(
+                            label: Text('${it.emoji} ${it.name}'),
+                            selected: state.owned.contains(it.name),
+                            onSelected: (_) => state.toggleOwned(it.name),
+                          ),
+                        ),
+                    ]),
+                  ),
+                ],
+              if (customItems.isNotEmpty)
+                const Padding(
+                  padding: EdgeInsets.fromLTRB(16, 16, 16, 0),
+                  child: Text('İpucu: kendi eklediğin ürünü silmek için üzerine uzun bas.'),
+                ),
+            ],
+          );
+        },
+      );
+}
+
+// ---------------------------------------------------------------- Liste
+
+class ShoppingPage extends StatefulWidget {
+  const ShoppingPage({super.key});
+
+  @override
+  State<ShoppingPage> createState() => _ShoppingPageState();
+}
+
+class _ShoppingPageState extends State<ShoppingPage> {
+  String q = '';
+
+  Future<void> _addExtra() async {
+    final c = TextEditingController();
+    String? error;
+    await showDialog<void>(
+      context: context,
+      builder: (d) => StatefulBuilder(
+        builder: (d, setS) => AlertDialog(
+          title: const Text('Listeye ürün ekle'),
+          content: TextField(
+            controller: c,
+            autofocus: true,
+            textCapitalization: TextCapitalization.sentences,
+            decoration: InputDecoration(labelText: 'Ürün', hintText: 'ör. 2 kg elma', errorText: error),
+          ),
+          actions: [
+            TextButton(onPressed: () => Navigator.pop(d), child: const Text('Vazgeç')),
+            FilledButton(
+              onPressed: () {
+                if (c.text.trim().isEmpty) {
+                  setS(() => error = 'Bir şey yazın');
+                } else if (!state.addExtra(c.text)) {
+                  setS(() => error = 'Bu zaten listede');
+                } else {
+                  Navigator.pop(d);
+                }
+              },
+              child: const Text('Ekle'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  void _copy(List<MapEntry<Item, double>> list) {
+    final lines = [
+      for (final t in state.extras) '${state.bought.contains('x:$t') ? '✓' : '•'} $t',
+      for (final e in list)
+        '${state.bought.contains(e.key.name) ? '✓' : '•'} ${e.key.name}: ${fmtQty(e.key, e.value)}',
+    ];
+    Clipboard.setData(ClipboardData(text: 'Alışveriş listesi\n${lines.join('\n')}'));
+    toast('Liste kopyalandı, istediğin uygulamada paylaşabilirsin.');
+  }
+
+  @override
+  Widget build(BuildContext context) => ListenableBuilder(
+        listenable: state,
+        builder: (context, _) {
+          final all = state.shopping;
+          final list = all.where((e) => q.trim().isEmpty || matches(e.key.name, q)).toList();
+          final extras = state.extras.where((t) => q.trim().isEmpty || matches(t, q)).toList();
+          final total = all.length + state.extras.length;
+          final got = all.where((e) => state.bought.contains(e.key.name)).length +
+              state.extras.where((t) => state.bought.contains('x:$t')).length;
           return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            _title(context, 'Alışveriş Listesi', actions: [
-              if (list.isNotEmpty)
+            pageTitle(context, 'Alışveriş Listesi', actions: [
+              IconButton(tooltip: 'Ürün ekle', icon: const Icon(Icons.add), onPressed: _addExtra),
+              if (total > 0)
                 IconButton(
                   tooltip: 'Listeyi kopyala',
                   icon: const Icon(Icons.copy),
-                  onPressed: () {
-                    final text = list
-                        .map((e) => '${state.bought.contains(e.key.name) ? '✓' : '•'} ${e.key.name}: ${fmtQty(e.key, e.value)}')
-                        .join('\n');
-                    Clipboard.setData(ClipboardData(text: 'Alışveriş listesi\n$text'));
-                    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-                        content: Text('Liste kopyalandı, istediğin uygulamada paylaşabilirsin.')));
-                  },
+                  onPressed: () => _copy(all),
                 ),
             ]),
-            if (list.isEmpty)
+            if (total == 0)
               const Expanded(
                 child: Center(
                   child: Padding(
                     padding: EdgeInsets.all(32),
-                    child: Text('Liste boş. Plan oluşturunca eksik malzemeler burada görünür.',
+                    child: Text(
+                        'Liste boş. Plan oluşturunca eksik malzemeler burada görünür; + ile kendi ürünlerini de ekleyebilirsin.',
                         textAlign: TextAlign.center),
                   ),
                 ),
               )
             else ...[
+              SearchBox(hint: 'Listede ara', onChanged: (v) => setState(() => q = v)),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16),
-                child: Text(
-                    '${state.bought.where((n) => list.any((e) => e.key.name == n)).length}/${list.length} alındı · tahmini ${state.estimatedCost.round()} ₺'),
+                child: Text('$got/$total alındı · tahmini ${state.estimatedCost.round()} ₺'),
               ),
               Expanded(
-                child: ListView(children: [
-                  for (final cat in categories)
-                    if (list.any((e) => e.key.cat == cat)) ...[
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(16, 12, 16, 0),
-                        child: Text(cat, style: Theme.of(context).textTheme.titleSmall),
-                      ),
-                      for (final e in list.where((e) => e.key.cat == cat))
-                        CheckboxListTile(
-                          value: state.bought.contains(e.key.name),
-                          onChanged: (_) => state.toggleBought(e.key.name),
-                          title: Text('${e.key.emoji} ${e.key.name}',
-                              style: TextStyle(
-                                  decoration: state.bought.contains(e.key.name)
-                                      ? TextDecoration.lineThrough
-                                      : null)),
-                          secondary: Text(fmtQty(e.key, e.value)),
-                        ),
-                    ],
-                ]),
+                child: list.isEmpty && extras.isEmpty
+                    ? const Center(child: Text('Eşleşen ürün yok'))
+                    : ListView(children: [
+                        if (extras.isNotEmpty) ...[
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(16, 12, 16, 0),
+                            child: Text('Eklediğim ürünler', style: Theme.of(context).textTheme.titleSmall),
+                          ),
+                          for (final t in extras)
+                            CheckboxListTile(
+                              value: state.bought.contains('x:$t'),
+                              onChanged: (_) => state.toggleBought('x:$t'),
+                              title: Text(t,
+                                  style: TextStyle(
+                                      decoration: state.bought.contains('x:$t')
+                                          ? TextDecoration.lineThrough
+                                          : null)),
+                              secondary: IconButton(
+                                tooltip: 'Sil',
+                                icon: const Icon(Icons.delete_outline),
+                                onPressed: () => state.removeExtra(t),
+                              ),
+                            ),
+                        ],
+                        for (final cat in categories)
+                          if (list.any((e) => e.key.cat == cat)) ...[
+                            Padding(
+                              padding: const EdgeInsets.fromLTRB(16, 12, 16, 0),
+                              child: Text(cat, style: Theme.of(context).textTheme.titleSmall),
+                            ),
+                            for (final e in list.where((e) => e.key.cat == cat))
+                              CheckboxListTile(
+                                value: state.bought.contains(e.key.name),
+                                onChanged: (_) => state.toggleBought(e.key.name),
+                                title: Text('${e.key.emoji} ${e.key.name}',
+                                    style: TextStyle(
+                                        decoration: state.bought.contains(e.key.name)
+                                            ? TextDecoration.lineThrough
+                                            : null)),
+                                secondary: Text(fmtQty(e.key, e.value)),
+                              ),
+                          ],
+                      ]),
               ),
             ],
           ]);
@@ -476,78 +470,112 @@ class ShoppingPage extends StatelessWidget {
 
 // ---------------------------------------------------------------- Tercihler
 
-class PrefsPage extends StatelessWidget {
+class PrefsPage extends StatefulWidget {
   const PrefsPage({super.key});
+
+  @override
+  State<PrefsPage> createState() => _PrefsPageState();
+}
+
+class _PrefsPageState extends State<PrefsPage> {
+  String q = '';
 
   @override
   Widget build(BuildContext context) => ListenableBuilder(
         listenable: state,
-        builder: (context, _) => ListView(
-          padding: const EdgeInsets.fromLTRB(16, 0, 16, 24),
-          children: [
-            _title(context, 'Tercihler'),
-            const SizedBox(height: 8),
-            Text('Kaç kişilik yemek yapıyorsun?', style: Theme.of(context).textTheme.titleMedium),
-            Row(children: [
-              IconButton.filledTonal(
-                icon: const Icon(Icons.remove),
-                onPressed: state.people > 1 ? () => state.setPrefs(people: state.people - 1) : null,
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: Text('${state.people}', style: Theme.of(context).textTheme.headlineSmall),
-              ),
-              IconButton.filledTonal(
-                icon: const Icon(Icons.add),
-                onPressed: state.people < 12 ? () => state.setPrefs(people: state.people + 1) : null,
-              ),
-            ]),
-            const SizedBox(height: 16),
-            Text('Haftalık alışveriş bütçesi: ${state.budget.round()} ₺',
-                style: Theme.of(context).textTheme.titleMedium),
-            Slider(
-              min: 500,
-              max: 8000,
-              divisions: 75,
-              value: state.budget.clamp(500, 8000),
-              label: '${state.budget.round()} ₺',
-              onChanged: (v) => state.setPrefs(budget: (v / 100).round() * 100.0),
-            ),
-            const SizedBox(height: 8),
-            Text('Beslenme tercihi', style: Theme.of(context).textTheme.titleMedium),
-            const SizedBox(height: 8),
-            SegmentedButton<int>(
-              segments: const [
-                ButtonSegment(value: 0, label: Text('Hepsi')),
-                ButtonSegment(value: 1, label: Text('Vejetaryen')),
-                ButtonSegment(value: 2, label: Text('Vegan')),
-              ],
-              selected: {state.diet},
-              onSelectionChanged: (s) => state.setPrefs(diet: s.first),
-            ),
-            const SizedBox(height: 20),
-            Text('Sevmediğim yiyecekler', style: Theme.of(context).textTheme.titleMedium),
-            const Text('Seçtiklerin hiçbir tarifte kullanılmaz.'),
-            const SizedBox(height: 8),
-            Wrap(spacing: 8, children: [
-              for (final it in allItems)
-                FilterChip(
-                  label: Text('${it.emoji} ${it.name}'),
-                  selected: state.disliked.contains(it.name),
-                  onSelected: (_) => state.toggleDisliked(it.name),
+        builder: (context, _) {
+          final shown = allItems.where((i) => q.trim().isEmpty || matches(i.name, q)).toList();
+          return ListView(
+            padding: const EdgeInsets.fromLTRB(16, 0, 16, 24),
+            children: [
+              pageTitle(context, 'Tercihler'),
+              const SizedBox(height: 8),
+              Text('Kaç kişilik yemek yapıyorsun?', style: Theme.of(context).textTheme.titleMedium),
+              Row(children: [
+                IconButton.filledTonal(
+                  icon: const Icon(Icons.remove),
+                  onPressed: state.people > 1 ? () => state.setPrefs(people: state.people - 1) : null,
                 ),
-            ]),
-            if (!state.onboarded) ...[
-              const SizedBox(height: 24),
-              FilledButton(
-                onPressed: () {
-                  state.finishOnboarding();
-                  tabIndex.value = 1;
-                },
-                child: const Text('Devam: evdeki malzemeleri seç'),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Text('${state.people}', style: Theme.of(context).textTheme.headlineSmall),
+                ),
+                IconButton.filledTonal(
+                  icon: const Icon(Icons.add),
+                  onPressed: state.people < 12 ? () => state.setPrefs(people: state.people + 1) : null,
+                ),
+              ]),
+              const SizedBox(height: 16),
+              Text('Haftalık alışveriş bütçesi: ${state.budget.round()} ₺',
+                  style: Theme.of(context).textTheme.titleMedium),
+              Slider(
+                min: 500,
+                max: 8000,
+                divisions: 75,
+                value: state.budget.clamp(500, 8000),
+                label: '${state.budget.round()} ₺',
+                onChanged: (v) => state.setPrefs(budget: (v / 100).round() * 100.0),
               ),
+              const SizedBox(height: 8),
+              Text('Beslenme tercihi', style: Theme.of(context).textTheme.titleMedium),
+              const SizedBox(height: 8),
+              SegmentedButton<int>(
+                segments: const [
+                  ButtonSegment(value: 0, label: Text('Hepsi')),
+                  ButtonSegment(value: 1, label: Text('Vejetaryen')),
+                  ButtonSegment(value: 2, label: Text('Vegan')),
+                ],
+                selected: {state.diet},
+                onSelectionChanged: (s) => state.setPrefs(diet: s.first),
+              ),
+              const SizedBox(height: 20),
+              Row(children: [
+                Expanded(
+                  child: Text('Sevmediğim yiyecekler', style: Theme.of(context).textTheme.titleMedium),
+                ),
+                TextButton.icon(
+                  icon: const Icon(Icons.add),
+                  label: const Text('Ürün ekle'),
+                  onPressed: () => showAddItemDialog(context),
+                ),
+              ]),
+              const Text('Seçtiklerin hiçbir tarifte kullanılmaz.'),
+              SearchBox(
+                hint: 'Ürün ara',
+                padding: const EdgeInsets.symmetric(vertical: 8),
+                onChanged: (v) => setState(() => q = v),
+              ),
+              if (shown.isEmpty)
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 16),
+                  child: Row(children: [
+                    const Text('Eşleşen ürün yok'),
+                    TextButton(
+                      onPressed: () => showAddItemDialog(context, initialName: q.trim()),
+                      child: Text('Ekle: "${q.trim()}"'),
+                    ),
+                  ]),
+                ),
+              Wrap(spacing: 8, children: [
+                for (final it in shown)
+                  FilterChip(
+                    label: Text('${it.emoji} ${it.name}'),
+                    selected: state.disliked.contains(it.name),
+                    onSelected: (_) => state.toggleDisliked(it.name),
+                  ),
+              ]),
+              if (!state.onboarded) ...[
+                const SizedBox(height: 24),
+                FilledButton(
+                  onPressed: () {
+                    state.finishOnboarding();
+                    tabIndex.value = 2;
+                  },
+                  child: const Text('Devam: evdeki malzemeleri seç'),
+                ),
+              ],
             ],
-          ],
-        ),
+          );
+        },
       );
 }

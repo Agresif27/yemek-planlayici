@@ -15,6 +15,7 @@ class AppState extends ChangeNotifier {
   Set<int> done = {}; // slot = gün * 3 + öğün
   List<String?> plan = List.filled(21, null);
   Map<String, int> ratings = {};
+  List<String> extras = []; // alışveriş listesine elle eklenenler
 
   final _rnd = Random();
   SharedPreferences? _prefs;
@@ -37,6 +38,11 @@ class AppState extends ChangeNotifier {
       done = Set<int>.from(m['done'] ?? []);
     }
     ratings = Map<String, int>.from(m['ratings'] ?? {});
+    extras = List<String>.from(m['extras'] ?? []);
+    Catalog.setCustom(
+      [for (final j in (m['customItems'] ?? []) as List) Item.fromJson(j)],
+      [for (final j in (m['customRecipes'] ?? []) as List) Recipe.fromJson(j)],
+    );
   }
 
   void _commit() {
@@ -53,6 +59,9 @@ class AppState extends ChangeNotifier {
           'done': done.toList(),
           'plan': plan,
           'ratings': ratings,
+          'extras': extras,
+          'customItems': customItems.map((i) => i.toJson()).toList(),
+          'customRecipes': customRecipes.map((r) => r.toJson()).toList(),
         }));
     notifyListeners();
   }
@@ -217,8 +226,55 @@ class AppState extends ChangeNotifier {
     _commit();
   }
 
+  /// Yeni ürün ekler. Aynı adlı ürün varsa false döner.
+  bool addCustomItem(Item it) {
+    if (items.keys.any((n) => n.toLowerCase() == it.name.toLowerCase())) return false;
+    Catalog.setCustom([...customItems, it], customRecipes);
+    _commit();
+    return true;
+  }
+
+  /// Özel ürünü siler; özel bir tarifte kullanılıyorsa false döner.
+  bool removeCustomItem(String name) {
+    if (customRecipes.any((r) => r.ing.containsKey(name))) return false;
+    Catalog.setCustom(customItems.where((i) => i.name != name).toList(), customRecipes);
+    owned.remove(name);
+    disliked.remove(name);
+    bought.remove(name);
+    _commit();
+    return true;
+  }
+
+  void addCustomRecipe(Recipe r) {
+    Catalog.setCustom(customItems, [...customRecipes, r]);
+    _commit();
+  }
+
+  void removeCustomRecipe(String id) {
+    Catalog.setCustom(customItems, customRecipes.where((r) => r.id != id).toList());
+    plan = [for (final p in plan) p == id ? null : p];
+    ratings.remove(id);
+    _commit();
+  }
+
+  bool addExtra(String text) {
+    final t = text.trim();
+    if (t.isEmpty || extras.contains(t)) return false;
+    extras = [...extras, t];
+    _commit();
+    return true;
+  }
+
+  void removeExtra(String text) {
+    extras = extras.where((e) => e != text).toList();
+    bought.remove('x:$text');
+    _commit();
+  }
+
   void finishOnboarding() {
     onboarded = true;
     _commit();
   }
 }
+
+final state = AppState();
