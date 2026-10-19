@@ -1,0 +1,89 @@
+Mercimek Çorbası|🥣|30|12|Mercimek:40,Soğan:0.5,Havuç:30,Patates:30,Sıvı yağ:10|Soğan, havuç ve patatesi yağda kavurun.;Mercimeği ve suyu ekleyip 25 dk pişirin.;Blenderdan geçirip limonla servis edin.
+Kuru Fasulye & Pilav|🍲|60|12|Kuru fasulye:80,Soğan:0.5,Salça:10,Sıvı yağ:10,Pirinç:50|Fasulyeyi önceden ıslatın.;Soğan ve salçayı kavurup fasulye ve suyu ekleyin.;Yumuşayınca pilavla servis edin.
+Nohutlu Pilav|🍚|30|12|Pirinç:70,Nohut:50,Sıvı yağ:10,Soğan:0.3|Haşlanmış nohutu soğanla kavurun.;Pirinç ve 2 ölçü suyu ekleyip pişirin.
+Domates Soslu Makarna|🍝|20|12|Makarna:90,Domates:100,Sarımsak:0.5,Zeytinyağı:10|Makarnayı haşlayın.;Sarımsak ve domatesten sos yapıp karıştırın.
+Tavuk Sote & Pilav|🍗|35|12|Tavuk:150,Biber:60,Domates:80,Soğan:0.5,Pirinç:60|Tavuğu mühürleyin.;Sebzeleri ekleyip pişirin, pilavla servis edin.
+Kıymalı Makarna|🍝|25|12|Kıyma:100,Makarna:80,Salça:10,Soğan:0.5|Soğan ve kıymayı kavurup salça ekleyin.;Haşlanmış makarnayla karıştırın.
+Patlıcan Musakka|🍆|50|2|Patlıcan:150,Kıyma:80,Domates:80,Soğan:0.5|Patlıcanları kızartın.;Kıymalı harç hazırlayıp dizin, 25 dk fırınlayın.
+Yoğurtlu Ispanak|🥬|20|12|Ispanak:150,Yumurta:1,Yoğurt:80,Sarımsak:0.3|Ispanağı kavurup yumurtayı pişirin.;Sarımsaklı yoğurtla servis edin.
+Bulgur Pilavı & Cacık|🌾|25|12|Bulgur:80,Domates:60,Yoğurt:100,Salatalık:40,Sarımsak:0.3|Bulguru domatesle pişirin.;Yoğurt, salatalık ve sarımsaktan cacık yapın.
+Fırında Tavuk Patates|🍗|55|2|Tavuk:150,Patates:200,Soğan:0.3,Sıvı yağ:10|Malzemeleri baharat ve yağla harmanlayın.;200°C fırında 45 dk pişirin.
+Kabak Mücver|🥒|30|12|Kabak:150,Yumurta:1,Un:30,Peynir:30,Yoğurt:50|Kabağı rendeleyip suyunu sıkın.;Yumurta, un ve peynirle karıştırıp kızartın.
+Etli Nohut|🍖|70|2|Kuşbaşı et:100,Nohut:70,Soğan:0.5,Salça:10,Pirinç:50|Eti soğanla kavurun.;Nohut ve su ekleyip yumuşayana kadar pişirin.
+Ton Balıklı Salata|🥗|10|1|Ton balığı:0.5,Domates:100,Salatalık:50,Limon:0.25,Zeytinyağı:10|Sebzeleri doğrayın.;Ton balığı, limon ve zeytinyağıyla karıştırın.
+Sebzeli Güveç|🍲|50|2|Patates:100,Patlıcan:80,Kabak:80,Biber:40,Domates:80,Sıvı yağ:10|Sebzeleri güvece dizin.;Fırında 40 dk pişirin.
+Mercimek Köfte|🥙|40|12|Mercimek:60,Bulgur:40,Soğan:0.3,Salça:10|Mercimeği haşlayıp bulgur ekleyin.;Soğan ve salçayla yoğurup şekil verin.
+Tavuklu Salata|🥗|20|1|Tavuk:100,Marul:80,Domates:80,Salatalık:40,Limon:0.25,Zeytinyağı:10|Tavuğu pişirip şeritler halinde kesin.;Sebzelerle karıştırıp servis edin.
+Tavuk Dürüm|🌯|25|1|Tavuk:100,Lavaş:1,Domates:50,Marul:40,Yoğurt:30|Tavuğu baharatla pişirip doğrayın.;Lavaşa sebze ve yoğurtla sarın.
+Nohut Salatası|🥗|15|1|Nohut:70,Domates:80,Salatalık:40,Soğan:0.2,Limon:0.25,Zeytinyağı:10|Haşlanmış nohutu sebzelerle karıştırın.;Limon ve zeytinyağıyla tatlandırın.
+Patates Salatası|🥔|25|1|Patates:200,Soğan:0.3,Limon:0.25,Zeytinyağı:10|Patatesi haşlayıp küp doğrayın.;Soğan, limon ve zeytinyağıyla karıştırın.
+Sebzeli Makarna|🍝|25|12|Makarna:90,Kabak:80,Biber:40,Zeytinyağı:10|Makarnayı haşlayın.;Sebzeleri soteleyip karıştırın.
+Kıymalı Patates|🥔|40|12|Patates:200,Kıyma:70,Soğan:0.3,Salça:10|Soğan ve kıymayı kavurup salça ekleyin.;Patates ve su ekleyip pişirin.
+Mantar Sote|🍄|20|12|Mantar:150,Soğan:0.3,Biber:40,Peynir:20|Mantarı yüksek ateşte soteleyin.;Soğan, biber ve peynir ekleyin.
+Tavuklu Pilav|🍚|35|12|Tavuk:100,Pirinç:70,Sıvı yağ:10|Tavuğu küçük doğrayıp kavurun.;Pirinç ve su ekleyip pişirin.
+Ton Balıklı Makarna|🍝|20|12|Makarna:80,Ton balığı:0.5,Domates:80,Sarımsak:0.3|Makarnayı haşlayın.;Sarımsak ve domatesi pişirip ton balığıyla birleştirin.
+Kuşbaşı Güveç|🍲|90|2|Kuşbaşı et:120,Patates:100,Havuç:50,Biber:40,Domates:60|Et ve sebzeleri güvece dizin.;Su ekleyip 75 dk pişirin.
+Kıymalı Ispanak|🥬|30|2|Ispanak:150,Kıyma:70,Soğan:0.3,Pirinç:30|Soğan ve kıymayı kavurun.;Ispanak ve pirinci ekleyip pişirin.
+Tavuklu Sebze Çorbası|🍜|35|12|Tavuk:70,Havuç:40,Patates:50,Soğan:0.3|Tavuğu haşlayıp didikleyin.;Sebzeleri ekleyip pişirin.
+Yoğurt Çorbası|🥣|25|12|Yoğurt:150,Pirinç:20,Un:10,Yumurta:0.3|Pirinci haşlayın.;Yoğurt, un ve yumurtayı çırpıp ekleyin, karıştırarak kaynatın.
+Karnıyarık|🍆|55|2|Patlıcan:180,Kıyma:80,Domates:60,Soğan:0.5,Biber:30|Patlıcanları kızartıp ortalarını açın.;Kıymalı harçla doldurup 20 dk fırınlayın.
+Kıymalı Kabak|🥒|35|2|Kabak:200,Kıyma:70,Soğan:0.3,Pirinç:20|Soğan ve kıymayı kavurun.;Kabak ve pirinci ekleyip pişirin.
+Tavuklu Mantarlı Makarna|🍝|30|12|Tavuk:100,Makarna:80,Mantar:50,Süt:50|Tavuk ve mantarı soteleyin, sütle koyulaştırın.;Makarnayla karıştırın.
+Ispanaklı Mercimek|🥬|30|12|Mercimek:60,Ispanak:80,Soğan:0.3,Limon:0.25|Soğanı kavurup mercimek ve suyu ekleyin.;Ispanak ekleyip pişirin.
+Domates Çorbası|🍅|25|12|Domates:200,Un:15,Tereyağı:10,Süt:100|Unu tereyağında kavurun.;Domates ve sütü ekleyip kaynatın.
+Tarhana Çorbası|🥣|20|12|Tarhana:40,Tereyağı:10,Salça:5|Tarhanayı su ile açın.;Tereyağlı salçayı ekleyip pişirin.
+Ezogelin Çorbası|🥣|35|12|Mercimek:40,Bulgur:15,Soğan:0.3,Salça:10,Sıvı yağ:10|Soğan ve salçayı kavurun.;Mercimek, bulgur ve su ekleyip pişirin.
+Sebze Çorbası|🥣|30|12|Havuç:50,Patates:60,Kabak:50,Soğan:0.3,Sıvı yağ:10|Sebzeleri doğrayıp kavurun.;Su ekleyip pişirin, blenderdan geçirin.
+Brokoli Çorbası|🥦|25|12|Brokoli:150,Patates:50,Soğan:0.3,Süt:80|Brokoli ve patatesi haşlayın.;Sütle blenderdan geçirin.
+Havuç Çorbası|🥕|25|12|Havuç:150,Patates:50,Soğan:0.3,Sıvı yağ:10|Sebzeleri kavurup suyla pişirin.;Blenderdan geçirin.
+Karnabahar Çorbası|🥣|30|12|Karnabahar:150,Patates:50,Soğan:0.3,Süt:80|Sebzeleri haşlayın.;Sütle blenderdan geçirin.
+Mantar Çorbası|🍄|25|12|Mantar:120,Soğan:0.3,Un:15,Süt:150|Mantar ve soğanı kavurun.;Un ve sütle koyulaştırın, blenderdan geçirin.
+Pırasa Çorbası|🥬|30|12|Pırasa:150,Patates:60,Süt:80,Soğan:0.2|Sebzeleri haşlayın.;Sütle blenderdan geçirin.
+Düğün Çorbası|🥣|45|12|Kuşbaşı et:50,Un:15,Yumurta:0.5,Yoğurt:50,Tereyağı:10|Eti haşlayın.;Un, yumurta ve yoğurtla terbiye edin.
+Şehriye Çorbası|🍜|20|12|Şehriye:30,Domates:80,Sıvı yağ:10|Şehriyeyi kavurun.;Domates ve su ekleyip pişirin.
+Tavuk Suyu Çorba|🍜|35|12|Tavuk:60,Şehriye:25,Havuç:30,Limon:0.25|Tavuğu haşlayın.;Şehriye ve havuç ekleyin, limonla servis edin.
+Yeşil Mercimek Yemeği|🫘|40|12|Yeşil mercimek:80,Soğan:0.5,Salça:10,Sıvı yağ:10|Soğan ve salçayı kavurun.;Mercimek ve su ekleyip pişirin.
+Barbunya Pilaki|🫘|45|12|Barbunya:80,Soğan:0.5,Havuç:40,Patates:50,Zeytinyağı:15|Sebzeleri zeytinyağında kavurun.;Barbunya ve su ekleyip kısık ateşte pişirin.
+Nohut Yemeği|🫘|50|12|Nohut:80,Soğan:0.5,Salça:10,Sıvı yağ:10|Soğan ve salçayı kavurun.;Haşlanmış nohut ve su ekleyip pişirin.
+Taze Fasulye (Zeytinyağlı)|🫛|40|12|Taze fasulye:150,Domates:80,Soğan:0.5,Zeytinyağı:15|Soğanı zeytinyağında kavurun.;Fasulye ve domates ekleyip pişirin.
+Etli Taze Fasulye|🫛|50|2|Taze fasulye:150,Kuşbaşı et:80,Domates:80,Soğan:0.5|Eti soğanla kavurun.;Fasulye ve domates ekleyip pişirin.
+Bamya (Zeytinyağlı)|🥒|40|12|Bamya:150,Domates:80,Soğan:0.5,Zeytinyağı:15,Limon:0.25|Bamyaları sirkede bekletip haşlayın.;Soğan ve domatesle pişirin.
+Etli Bamya|🥒|55|2|Bamya:150,Kuşbaşı et:80,Domates:60,Soğan:0.5|Eti soğanla pişirin.;Bamya ve domates ekleyip pişirin.
+Pırasa (Zeytinyağlı)|🥬|35|12|Pırasa:200,Havuç:40,Pirinç:20,Zeytinyağı:15|Pırasa ve havucu zeytinyağında kavurun.;Pirinç ve su ekleyip pişirin.
+Karnabahar Kızartması|🥦|30|12|Karnabahar:200,Un:30,Yumurta:1,Sıvı yağ:20|Karnabaharı haşlayın.;Una ve yumurtaya bulayıp kızartın.
+Fırında Karnabahar|🥦|40|12|Karnabahar:250,Kaşar:40,Süt:50|Karnabaharı haşlayın.;Süt ve kaşarla fırınlayın.
+Etli Karnabahar|🥦|50|2|Karnabahar:200,Kıyma:60,Domates:60,Soğan:0.3|Kıymayı soğanla kavurun.;Karnabahar ve domates ekleyip pişirin.
+Lahana Sarması|🥬|70|2|Lahana:200,Kıyma:70,Pirinç:30,Soğan:0.3|Lahana yapraklarını haşlayın.;Kıymalı pirinç harcıyla sarıp pişirin.
+Kapuska|🥬|40|12|Lahana:250,Kıyma:50,Domates:60,Soğan:0.3,Salça:10|Soğan ve kıymayı kavurun.;Lahana ve salça ekleyip pişirin.
+Zeytinyağlı Lahana|🥬|35|12|Lahana:250,Havuç:40,Soğan:0.3,Zeytinyağı:15,Pirinç:20|Sebzeleri zeytinyağında kavurun.;Pirinç ve su ekleyip pişirin.
+Pazı Yemeği|🥬|35|12|Pazı:200,Soğan:0.3,Bulgur:30,Sıvı yağ:10|Soğanı kavurup pazıyı ekleyin.;Bulgur ve su ekleyip pişirin.
+Pazı Kavurması|🥬|20|12|Pazı:200,Yumurta:1,Soğan:0.3|Soğan ve pazıyı kavurun.;Yumurta ekleyip karıştırın.
+Kereviz Yemeği|🥕|45|12|Kereviz:200,Havuç:50,Patates:50,Zeytinyağı:15,Limon:0.25|Sebzeleri zeytinyağında kavurun.;Su ekleyip pişirin.
+Bezelye Yemeği|🫛|35|12|Bezelye:150,Havuç:50,Patates:50,Soğan:0.3,Sıvı yağ:10|Sebzeleri kavurun.;Bezelye ve su ekleyip pişirin.
+Etli Bezelye|🫛|50|2|Bezelye:150,Kuşbaşı et:70,Havuç:40,Soğan:0.3|Eti soğanla kavurun.;Bezelye ve havuç ekleyip pişirin.
+Kıymalı Bezelye|🫛|35|12|Bezelye:150,Kıyma:60,Soğan:0.3,Domates:60|Kıymayı soğanla kavurun.;Bezelye ve domates ekleyip pişirin.
+Mısırlı Pilav|🌽|25|12|Pirinç:70,Mısır:60,Sıvı yağ:10|Pirinci kavurun.;Mısır ve su ekleyip pişirin.
+Sebzeli Pilav|🍚|30|12|Pirinç:70,Havuç:40,Bezelye:40,Sıvı yağ:10|Sebzeleri kavurup pirinç ekleyin.;Su ile pişirin.
+Domatesli Pilav|🍚|25|12|Pirinç:80,Domates:80,Salça:5,Sıvı yağ:10|Pirinci kavurun.;Domates ve su ekleyip pişirin.
+Bulgur Pilavı|🌾|25|12|Bulgur:80,Soğan:0.3,Domates:60,Sıvı yağ:10|Soğan ve domatesi kavurun.;Bulgur ve su ekleyip pişirin.
+Şehriyeli Pilav|🍚|25|12|Pirinç:60,Şehriye:20,Tereyağı:10|Şehriyeyi kavurup pirinç ekleyin.;Su ile pişirin.
+Mercimekli Bulgur Pilavı|🌾|35|12|Bulgur:70,Mercimek:30,Soğan:0.3,Sıvı yağ:10|Mercimeği önce pişirin.;Soğanlı bulgurla birlikte pişirin.
+Peynirli Makarna|🍝|20|12|Makarna:90,Peynir:50,Tereyağı:10|Makarnayı haşlayın.;Tereyağı ve peynirle karıştırın.
+Kaşarlı Makarna|🍝|25|12|Makarna:90,Kaşar:50,Süt:60|Makarnayı haşlayın.;Süt ve kaşarla fırınlayın.
+Ispanaklı Makarna|🍝|25|12|Makarna:90,Ispanak:100,Sarımsak:0.5,Zeytinyağı:10|Ispanağı sarımsakla kavurun.;Makarnayla karıştırın.
+Mantarlı Makarna|🍝|25|12|Makarna:90,Mantar:100,Krema:50,Sarımsak:0.3|Mantarı soteleyin, krema ekleyin.;Makarnayla karıştırın.
+Brokolili Makarna|🥦|25|12|Makarna:90,Brokoli:100,Sarımsak:0.5,Zeytinyağı:10|Brokoliyi haşlayın.;Sarımsaklı yağda makarnayla soteleyin.
+Fırın Makarna|🍝|40|12|Makarna:90,Kıyma:60,Kaşar:40,Süt:80|Kıymalı sos yapın.;Makarna, sos, süt ve kaşarla fırınlayın.
+Tavuklu Fırın Makarna|🍝|45|12|Makarna:90,Tavuk:80,Kaşar:40,Krema:50|Tavuğu pişirip makarnayla karıştırın.;Krema ve kaşarla fırınlayın.
+Ton Balıklı Fırın Makarna|🍝|35|12|Makarna:90,Ton balığı:0.5,Kaşar:40,Süt:60|Makarnayı haşlayıp ton balığı ekleyin.;Süt ve kaşarla fırınlayın.
+Makarna Salatası|🥗|20|1|Makarna:80,Mısır:40,Domates:60,Salatalık:40,Zeytinyağı:10|Makarnayı haşlayıp soğutun.;Sebzelerle karıştırın.
+Havuçlu Bezelyeli Bulgur|🌾|25|12|Bulgur:80,Havuç:40,Bezelye:40,Sıvı yağ:10|Sebzeleri kavurun.;Bulgur ve su ekleyip pişirin.
+Patates Püresi & Köfte|🥔|45|2|Patates:200,Kıyma:90,Soğan:0.3,Süt:50|Köfte yoğurup pişirin.;Haşlanmış patatesi süt ile ezin.
+Fırında Patates|🥔|45|12|Patates:250,Sıvı yağ:15,Sarımsak:0.3|Patatesleri dilimleyip yağlayın.;200°C fırında 40 dk pişirin.
+Patates Oturtma|🥔|55|2|Patates:200,Kıyma:70,Domates:60,Soğan:0.3|Patatesleri kızartıp dizin.;Kıymalı harç ekleyip fırınlayın.
+Patates Kızartması & Yumurta|🍟|25|12|Patates:250,Yumurta:2,Sıvı yağ:30|Patatesleri kızartın.;Yumurta ile servis edin.
+Yumurtalı Ispanak Yemeği|🥬|20|12|Ispanak:200,Yumurta:2,Soğan:0.3|Ispanağı soğanla kavurun.;Yumurtaları kırıp pişirin.
+Ispanak Böreği|🥐|45|12|Yufka:2,Ispanak:150,Peynir:50,Yumurta:1|Harcı hazırlayıp yufkaya sarın.;Fırında 30 dk pişirin.
+Kıymalı Börek|🥐|50|12|Yufka:2,Kıyma:80,Soğan:0.3,Yumurta:1|Kıymalı harcı yufkaya sarın.;Yumurta sürüp fırınlayın.
+Patatesli Yufka Böreği|🥐|45|12|Yufka:2,Patates:150,Soğan:0.3,Yumurta:0.5|Haşlanmış patates harcını yufkaya sarın.;Fırında pişirin.
+Peynirli Gözleme Öğle|🫓|25|1|Un:100,Peynir:70,Maydanoz:10|Hamuru açıp peynir koyun.;Sacda pişirin.

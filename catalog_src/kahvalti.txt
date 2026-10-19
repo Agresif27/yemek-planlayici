@@ -1,0 +1,107 @@
+Menemen|🍳|15|02|Yumurta:2,Domates:100,Biber:50,Soğan:0.3,Ekmek:1|Soğan ve biberi kavurun, domatesi ekleyin.;Suyunu çekince yumurtaları kırıp hafifçe karıştırın.;Ekmekle servis edin.
+Mantarlı Omlet|🍳|15|0|Yumurta:2,Mantar:80,Peynir:20|Mantarı kavurun.;Çırpılmış yumurta ve peyniri ekleyip pişirin.
+Sucuklu Yumurta|🍳|10|0|Yumurta:2,Sucuk:50,Ekmek:1|Sucuğu tavada çevirin.;Yumurtaları kırıp pişirin, ekmekle servis edin.
+Peynirli Tost|🥪|10|0|Ekmek:2,Peynir:40,Tereyağı:5|Ekmeklerin arasına peynir koyun.;Tereyağlı tavada iki yüzünü kızartın.
+Sütlü Muzlu Yulaf|🥣|10|0|Yulaf:50,Süt:150,Muz:1,Bal:10|Yulafı sütle 5 dk pişirin.;Dilimlenmiş muz ve bal ekleyin.
+Mini Serpme Kahvaltı|🍽️|15|0|Yumurta:2,Peynir:40,Zeytin:30,Domates:60,Salatalık:40,Ekmek:1|Yumurtaları haşlayın.;Peynir, zeytin ve sebzelerle servis edin.
+Pankek|🥞|20|0|Un:60,Süt:120,Yumurta:0.5,Bal:10|Un, süt ve yumurtayı çırpın.;Yağlı tavada küçük kepçelerle pişirin, bal ile servis edin.
+Çılbır|🍳|15|0|Yumurta:2,Yoğurt:100,Sarımsak:0.3,Tereyağı:5,Ekmek:1|Yumurtaları sirkeli suda poşe edin.;Sarımsaklı yoğurdun üzerine koyup tereyağı gezdirin.
+Sebzeli Omlet|🍳|15|0|Yumurta:2,Biber:40,Domates:50,Soğan:0.2|Sebzeleri kavurun.;Yumurtayı ekleyip pişirin.
+Patatesli Yumurta|🍳|20|0|Patates:150,Yumurta:2,Soğan:0.2|Patatesi soğanla kızartın.;Yumurtaları kırıp kapağı kapatın.
+Ballı Yoğurt & Yulaf|🥛|5|0|Yoğurt:150,Bal:15,Yulaf:30|Yoğurdu kaseye alıp yulaf ve bal ekleyin.
+Zeytinli Domatesli Ekmek|🍅|5|0|Ekmek:2,Zeytin:40,Domates:100,Salatalık:40,Zeytinyağı:5|Dilimlenmiş sebze ve zeytini ekmekle servis edin, zeytinyağı gezdirin.
+Muzlu Yulaf Lapası|🍌|10|0|Yulaf:50,Muz:1|Yulafı suyla 5 dk pişirin.;Ezilmiş muzu ekleyin.
+Haşlanmış Yumurta Tabağı|🥚|12|0|Yumurta:2,Ekmek:1,Domates:60,Salatalık:40,Zeytin:20|Yumurtaları 8 dk haşlayın.;Sebze ve zeytinle servis edin.
+Sahanda Yumurta|🍳|8|0|Yumurta:2,Ekmek:1,Tereyağı:5|Tereyağını tavada eritin.;Yumurtaları kırıp pişirin.
+Kaşarlı Omlet|🍳|10|0|Yumurta:2,Kaşar:40|Yumurtayı çırpıp tavaya dökün.;Kaşarı ekleyip katlayın.
+Peynirli Omlet|🍳|10|0|Yumurta:2,Peynir:40,Maydanoz:5|Yumurtayı çırpıp pişirin.;Peynir ve maydanozu ekleyip katlayın.
+Ispanaklı Omlet|🍳|15|0|Yumurta:2,Ispanak:80,Peynir:20|Ispanağı kavurun.;Yumurta ve peyniri ekleyip pişirin.
+Pastırmalı Yumurta|🍳|10|0|Yumurta:2,Pastırma:30,Ekmek:1|Pastırmayı tavada çevirin.;Yumurtaları üzerine kırın.
+Peynirli Mıhlama|🧀|15|0|Un:20,Tereyağı:15,Kaşar:60,Ekmek:1|Tereyağında unu kavurun.;Peyniri ekleyip eriyene kadar karıştırın, ekmekle yiyin.
+Yumurtalı Ekmek|🍞|10|0|Ekmek:2,Yumurta:1,Süt:30,Tereyağı:5|Yumurta ve sütü çırpın.;Ekmekleri batırıp tereyağında kızartın.
+Fransız Tostu|🍞|15|0|Ekmek:2,Yumurta:1,Süt:50,Bal:15|Ekmekleri yumurtalı süte batırın.;Tavada kızartıp bal ile servis edin.
+Peynirli Börek|🥐|35|0|Yufka:1,Peynir:50,Yumurta:0.5,Süt:50|Yufkaya peynir koyup sarın.;Yumurtalı süt sürüp fırında pişirin.
+Ispanaklı Börek|🥐|40|0|Yufka:1,Ispanak:80,Peynir:30,Yumurta:0.5|Ispanak ve peynir harcını yufkaya sarın.;Yumurta sürüp fırınlayın.
+Patatesli Börek|🥐|40|0|Yufka:1,Patates:100,Soğan:0.2|Patatesi haşlayıp soğanla harç yapın.;Yufkaya sarıp fırınlayın.
+Peynirli Poğaça|🥯|45|0|Un:80,Yoğurt:50,Peynir:40,Sıvı yağ:20,Yumurta:0.5|Hamuru yoğurup bezelere ayırın.;Peynir koyup 20 dk fırınlayın.
+Peynirli Gözleme|🫓|20|0|Un:70,Peynir:50,Maydanoz:10|Hamuru açıp peynir ve maydanozu koyun.;Sacda iki yüzünü pişirin.
+Patatesli Gözleme|🫓|25|0|Un:70,Patates:100,Soğan:0.2|Haşlanmış patatesi soğanla harç yapın.;Hamura sarıp pişirin.
+Ispanaklı Gözleme|🫓|25|0|Un:70,Ispanak:80,Peynir:30|Ispanak ve peynir harcını hamura koyun.;Sacda pişirin.
+Ballı Krep|🥞|20|0|Un:50,Süt:100,Yumurta:0.5,Bal:10|Hamuru çırpıp ince krep pişirin.;Bal ile servis edin.
+Lor Peynirli Krep|🥞|20|0|Un:50,Süt:100,Yumurta:0.5,Lor peyniri:50|Krepleri pişirin.;İçine lor peyniri koyup katlayın.
+Elmalı Yulaf|🍎|10|0|Yulaf:50,Süt:150,Elma:1|Yulafı sütle pişirin.;Rendelenmiş elma ekleyin.
+Cevizli Yulaf|🌰|10|0|Yulaf:50,Süt:150,Ceviz:15,Bal:10|Yulafı sütle pişirin.;Ceviz ve bal ekleyin.
+Geceden Yulaf|🥣|5|0|Yulaf:50,Yoğurt:80,Süt:80,Bal:10,Muz:0.5|Malzemeleri kavanozda karıştırıp gece buzdolabında bekletin.
+Muzlu Yulaf Pankek|🥞|15|0|Yulaf:40,Yumurta:1,Muz:1|Muzu ezip yumurta ve yulafla karıştırın.;Tavada iki yüzünü pişirin.
+Yoğurtlu Meyve Kasesi|🥣|5|0|Yoğurt:150,Elma:1,Ceviz:10,Bal:10|Meyveyi doğrayıp yoğurtla karıştırın.
+Muzlu Yoğurt|🍌|3|0|Yoğurt:150,Muz:1,Bal:5|Muzu dilimleyip yoğurda ekleyin.
+Portakallı Yulaf|🍊|10|0|Yulaf:50,Süt:150,Portakal:1|Yulafı sütle pişirin.;Portakal dilimleriyle servis edin.
+Meyve Salatası|🍓|8|0|Elma:1,Muz:1,Portakal:1|Meyveleri doğrayıp karıştırın.
+Muzlu Süt Smoothie|🥤|5|0|Süt:200,Muz:1,Yulaf:20,Bal:10|Hepsini blenderdan geçirin.
+Avokadolu Yumurtalı Tost|🥑|10|0|Ekmek:2,Avokado:0.5,Limon:0.25,Yumurta:1|Avokadoyu ezip limonla karıştırın.;Kızarmış ekmeğe sürüp üzerine yumurta koyun.
+Avokadolu Ekmek|🥑|7|0|Ekmek:2,Avokado:0.5,Domates:50,Limon:0.25,Zeytinyağı:5|Avokadoyu ezip ekmeğe sürün.;Domates ve zeytinyağı ekleyin.
+Tahin Pekmez|🍯|3|0|Ekmek:1.5,Tahin:30,Pekmez:30|Tahin ve pekmezi karıştırıp ekmekle yiyin.
+Tahinli Muzlu Tost|🍌|7|0|Ekmek:2,Tahin:20,Muz:1|Ekmeği kızartıp tahin sürün.;Muz dilimleriyle servis edin.
+Reçelli Ekmek|🍓|3|0|Ekmek:2,Reçel:40|Ekmeğe reçel sürün.
+Ballı Tereyağlı Ekmek|🍯|3|0|Ekmek:2,Bal:20,Tereyağı:10|Ekmeğe tereyağı ve bal sürün.
+Domatesli Kaşarlı Tost|🥪|10|0|Ekmek:2,Kaşar:40,Domates:50|Ekmek arasına kaşar ve domates koyup tostlayın.
+Sucuklu Tost|🥪|10|0|Ekmek:2,Sucuk:40,Kaşar:30|Ekmek arasına sucuk ve kaşar koyup tostlayın.
+Sucuklu Omlet|🍳|12|0|Yumurta:2,Sucuk:40|Sucuğu çevirin.;Yumurta ekleyip omlet yapın.
+Domatesli Yumurta|🍅|15|0|Yumurta:2,Domates:120,Soğan:0.2,Ekmek:1|Soğan ve domatesi pişirin.;Yumurtaları ekleyip kapağı kapatın.
+Biberli Yumurta|🫑|15|0|Yumurta:2,Biber:80,Domates:40|Biberleri kavurun, domates ekleyin.;Yumurtaları kırın.
+Patlıcanlı Yumurta|🍆|20|0|Patlıcan:100,Yumurta:2,Domates:50|Patlıcanı kızartın, domates ekleyin.;Yumurtaları kırıp pişirin.
+Kabaklı Yumurta|🥒|15|0|Kabak:100,Yumurta:2|Kabağı rendeleyip kavurun.;Yumurta ekleyip karıştırın.
+Mantarlı Yumurta|🍄|15|0|Mantar:100,Yumurta:2|Mantarı kavurun.;Yumurta ekleyip pişirin.
+Fırında Kaşarlı Yumurta|🧀|15|0|Yumurta:2,Kaşar:40,Domates:50|Domatesi kaba koyup yumurtaları kırın.;Üzerine kaşar rendeleyip fırınlayın.
+Ispanaklı Yumurta|🥬|15|0|Ispanak:120,Yumurta:2,Soğan:0.2|Soğan ve ıspanağı kavurun.;Yumurtaları kırıp pişirin.
+Pırasalı Yumurta|🥬|20|0|Pırasa:100,Yumurta:2|Pırasayı doğrayıp kavurun.;Yumurta ekleyin.
+Mısırlı Omlet|🌽|12|0|Yumurta:2,Mısır:40|Mısırı yumurtaya karıştırıp omlet yapın.
+Brokolili Omlet|🥦|15|0|Yumurta:2,Brokoli:60|Brokoliyi haşlayıp doğrayın.;Yumurtayla omlet yapın.
+Maydanozlu Omlet|🌿|10|0|Yumurta:2,Maydanoz:15,Peynir:20|Maydanozu yumurtaya ekleyin.;Peynirle birlikte pişirin.
+Maydanozlu Lor Ekmek|🌿|5|0|Ekmek:2,Lor peyniri:60,Maydanoz:15|Lor ve maydanozu karıştırıp ekmeğe sürün.
+Lorlu Salata Kahvaltı|🥗|8|0|Lor peyniri:80,Domates:80,Salatalık:40,Zeytinyağı:5,Ekmek:1|Sebzeleri doğrayıp lorla karıştırın.
+Peynir Tabağı|🧀|5|0|Peynir:60,Zeytin:30,Domates:80,Ekmek:1.5|Peynir, zeytin ve domatesi dilimleyip servis edin.
+Kaşarlı Sandviç|🥪|8|0|Ekmek:2,Kaşar:50,Domates:40,Marul:20|Ekmek arasına kaşar ve sebzeleri koyun.
+Tavuklu Sandviç|🥪|12|0|Ekmek:2,Tavuk:60,Marul:20,Domates:40,Yoğurt:20|Haşlanmış tavuğu didikleyip yoğurtla karıştırın.;Sebzelerle ekmeğe koyun.
+Ton Balıklı Sandviç|🥪|8|0|Ekmek:2,Ton balığı:0.5,Marul:20,Salatalık:30|Ton balığını ekmek arasına sebzelerle koyun.
+Yumurtalı Sandviç|🥪|12|0|Ekmek:2,Yumurta:2,Salatalık:30,Marul:20|Yumurtaları haşlayıp dilimleyin.;Ekmek arasına sebzeyle koyun.
+Avokadolu Yumurtalı Sandviç|🥑|10|0|Ekmek:2,Avokado:0.5,Yumurta:1|Avokadoyu ezip ekmeğe sürün.;Dilimlenmiş haşlanmış yumurtayı ekleyin.
+Salatalıklı Yoğurt|🥒|5|0|Yoğurt:150,Salatalık:60,Ekmek:1|Salatalığı rendeleyip yoğurda ekleyin, ekmekle yiyin.
+Sütlü İrmik|🥛|10|0|İrmik:40,Süt:200,Bal:15|İrmiği sütle karıştırarak pişirin.;Bal ekleyin.
+Pekmezli Yulaf|🍯|10|0|Yulaf:50,Süt:150,Pekmez:20|Yulafı sütle pişirin.;Pekmez ekleyin.
+Cevizli Pekmezli Ekmek|🌰|3|0|Ekmek:2,Pekmez:30,Ceviz:15|Ekmeğe pekmez sürüp ceviz serpin.
+Bademli Yulaf|🌰|10|0|Yulaf:50,Süt:150,Badem:15,Kuru üzüm:15|Yulafı sütle pişirin.;Badem ve üzüm ekleyin.
+Üzümlü Yulaf|🍇|10|0|Yulaf:50,Süt:150,Kuru üzüm:20|Yulafı sütle pişirin.;Üzüm ekleyin.
+Elmalı Pankek|🍎|20|0|Un:60,Süt:100,Elma:1,Yumurta:0.5|Rendelenmiş elmayı hamura ekleyin.;Tavada pişirin.
+Muzlu Pankek|🍌|20|0|Un:60,Süt:100,Muz:1,Yumurta:0.5|Muzu ezip hamura ekleyin.;Tavada pişirin.
+Yoğurtlu Pankek|🥞|20|0|Un:60,Yoğurt:80,Yumurta:0.5,Bal:10|Yoğurtlu hamuru pişirin.;Bal ile servis edin.
+Peynirli Lavaş Dürüm|🌯|8|0|Lavaş:1,Peynir:50,Maydanoz:10,Domates:40|Lavaşa peynir, maydanoz ve domates koyup sarın.
+Yumurtalı Lavaş Dürüm|🌯|12|0|Lavaş:1,Yumurta:2,Domates:40,Marul:20|Omlet yapıp lavaşa sebzeyle sarın.
+Sucuklu Lavaş Dürüm|🌯|10|0|Lavaş:1,Sucuk:40,Kaşar:30|Sucuğu kızartıp kaşarla lavaşa sarın.
+Avokadolu Lavaş|🥑|8|0|Lavaş:1,Avokado:0.5,Domates:50,Roka:20|Avokadoyu ezip lavaşa sürün.;Domates ve rokayı ekleyip sarın.
+Pastırmalı Kaşarlı Tost|🥪|10|0|Ekmek:2,Pastırma:30,Kaşar:30|Ekmek arasına pastırma ve kaşar koyup tostlayın.
+Rokalı Peynirli Tost|🥪|10|0|Ekmek:2,Peynir:40,Roka:20,Domates:40|Ekmek arasına peynir, roka ve domates koyup tostlayın.
+Humus Kahvaltı|🫘|10|0|Nohut:60,Tahin:20,Limon:0.25,Sarımsak:0.3,Zeytinyağı:10,Ekmek:1|Nohut, tahin, limon ve sarımsağı blenderdan geçirin.;Zeytinyağı gezdirip ekmekle yiyin.
+Zeytin Ezmeli Ekmek|🫒|5|0|Ekmek:2,Zeytin:50,Zeytinyağı:5,Ceviz:10|Zeytin ve cevizi ezip zeytinyağıyla karıştırın.;Ekmeğe sürün.
+Cevizli Peynirli Ekmek|🧀|5|0|Ekmek:2,Peynir:40,Ceviz:15|Ekmeğe peynir ve ceviz koyun.
+Kaşar Tava|🧀|10|0|Kaşar:80,Domates:60,Ekmek:1|Kaşarı tavada eritin.;Domates ve ekmekle servis edin.
+Sebzeli Lavaş Pizza|🍕|15|0|Lavaş:1,Domates:50,Biber:30,Kaşar:40,Mantar:30|Lavaşa sebze ve kaşar koyun.;Fırında 8 dk pişirin.
+Mini Ekmek Pizza|🍕|15|0|Ekmek:2,Domates:60,Kaşar:40,Mantar:30|Ekmeğe domates, mantar ve kaşar koyun.;Fırınlayın.
+Patates Rosti|🥔|20|0|Patates:200,Yumurta:1,Un:10|Patatesi rendeleyip suyunu sıkın.;Yumurta ve unla karıştırıp tavada kızartın.
+Patatesli Omlet|🥔|20|0|Patates:100,Yumurta:2|Patatesi ince doğrayıp kızartın.;Yumurtayla omlet yapın.
+Havuçlu Pankek|🥕|20|0|Un:50,Havuç:60,Yumurta:0.5,Süt:80|Havucu rendeleyip hamura ekleyin.;Tavada pişirin.
+Kabaklı Pankek|🥒|20|0|Un:50,Kabak:80,Yumurta:0.5,Süt:60|Kabağı rendeleyip hamura ekleyin.;Tavada pişirin.
+Ispanaklı Pankek|🥬|20|0|Un:50,Ispanak:60,Yumurta:0.5,Süt:80|Ispanağı doğrayıp hamura ekleyin.;Tavada pişirin.
+Tuzlu Kek|🍰|50|0|Un:80,Yumurta:1,Yoğurt:50,Peynir:30,Zeytin:20,Sıvı yağ:15|Hepsini karıştırıp kalıba dökün.;180°C fırında 35 dk pişirin.
+Muzlu Cevizli Yulaf|🍌|10|0|Yulaf:50,Süt:150,Muz:1,Ceviz:15|Yulafı sütle pişirin.;Muz ve ceviz ekleyin.
+Elmalı Tarçınlı Yulaf (Sütsüz)|🍎|10|0|Yulaf:50,Elma:1|Yulafı suyla pişirin.;Rendelenmiş elma ve tarçın ekleyin.
+Cevizli Pekmezli Yulaf (Sütsüz)|🌰|10|0|Yulaf:50,Pekmez:20,Ceviz:15|Yulafı suyla pişirin.;Pekmez ve ceviz ekleyin.
+Üzümlü Yulaf Lapası (Sütsüz)|🍇|10|0|Yulaf:50,Kuru üzüm:20|Yulafı suyla pişirin.;Üzüm ekleyin.
+Bademli Yulaf (Sütsüz)|🌰|10|0|Yulaf:50,Badem:15,Muz:0.5|Yulafı suyla pişirin.;Badem ve muz ekleyin.
+Portakallı Yulaf (Sütsüz)|🍊|10|0|Yulaf:50,Portakal:1|Yulafı suyla pişirin.;Portakal dilimleri ekleyin.
+Domates Salatalık Tabağı|🥗|5|0|Domates:100,Salatalık:60,Zeytin:30,Ekmek:1.5,Zeytinyağı:5|Sebzeleri dilimleyip zeytin ve ekmekle servis edin.
+Tahinli Pekmezli Yulaf|🥜|10|0|Yulaf:50,Tahin:15,Pekmez:20|Yulafı suyla pişirin.;Tahin ve pekmez ekleyin.
+Avokadolu Salata Kahvaltı|🥑|8|0|Avokado:1,Domates:80,Salatalık:50,Limon:0.25,Ekmek:1|Malzemeleri doğrayıp limonla karıştırın.
+Meyveli Tahin Tost|🍎|7|0|Ekmek:2,Tahin:20,Elma:1|Ekmeğe tahin sürüp elma dilimleri koyun.
+Kızarmış Ekmek Domates|🍞|10|0|Ekmek:2,Domates:100,Sarımsak:0.3,Zeytinyağı:10|Ekmeği kızartıp sarımsak sürün.;Rendelenmiş domates ve zeytinyağı ekleyin.
+Zeytinyağlı Ekmek Dilimi|🍞|5|0|Ekmek:2,Zeytinyağı:10,Zeytin:30,Domates:60|Ekmeği zeytinyağıyla kızartıp zeytin ve domatesle yiyin.

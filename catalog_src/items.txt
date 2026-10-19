@@ -1,0 +1,76 @@
+Soğan|🧅|Sebze|adet|3|
+Sarımsak|🧄|Sebze|adet|1.5|
+Domates|🍅|Sebze|g|0.04|
+Biber|🫑|Sebze|g|0.05|
+Patlıcan|🍆|Sebze|g|0.045|
+Patates|🥔|Sebze|g|0.02|
+Havuç|🥕|Sebze|g|0.02|
+Kabak|🥒|Sebze|g|0.035|
+Salatalık|🥒|Sebze|g|0.04|
+Ispanak|🥬|Sebze|g|0.04|
+Mantar|🍄|Sebze|g|0.1|
+Limon|🍋|Sebze|adet|4|
+Marul|🥬|Sebze|g|0.04|
+Karnabahar|🥦|Sebze|g|0.04|
+Lahana|🥬|Sebze|g|0.025|
+Pırasa|🥬|Sebze|g|0.04|
+Bezelye|🫛|Sebze|g|0.06|
+Taze fasulye|🫛|Sebze|g|0.08|
+Bamya|🥒|Sebze|g|0.15|
+Pazı|🥬|Sebze|g|0.035|
+Kereviz|🥬|Sebze|g|0.04|
+Brokoli|🥦|Sebze|g|0.06|
+Mısır|🌽|Sebze|g|0.04|
+Maydanoz|🌿|Sebze|g|0.05|
+Roka|🥬|Sebze|g|0.06|
+Muz|🍌|Meyve|adet|5|
+Elma|🍎|Meyve|adet|6|
+Portakal|🍊|Meyve|adet|6|
+Avokado|🥑|Meyve|adet|25|
+Kuru üzüm|🍇|Meyve|g|0.2|
+Pirinç|🍚|Bakliyat & Tahıl|g|0.06|
+Bulgur|🌾|Bakliyat & Tahıl|g|0.04|
+Makarna|🍝|Bakliyat & Tahıl|g|0.035|
+Mercimek|🫘|Bakliyat & Tahıl|g|0.07|
+Yeşil mercimek|🫘|Bakliyat & Tahıl|g|0.07|
+Nohut|🫘|Bakliyat & Tahıl|g|0.08|
+Kuru fasulye|🫘|Bakliyat & Tahıl|g|0.08|
+Barbunya|🫘|Bakliyat & Tahıl|g|0.08|
+Ekmek|🍞|Bakliyat & Tahıl|adet|8|
+Lavaş|🫓|Bakliyat & Tahıl|adet|6|
+Yufka|🫓|Bakliyat & Tahıl|adet|7|
+Un|🌾|Bakliyat & Tahıl|g|0.03|
+Yulaf|🥣|Bakliyat & Tahıl|g|0.06|
+İrmik|🌾|Bakliyat & Tahıl|g|0.04|
+Şehriye|🍜|Bakliyat & Tahıl|g|0.04|
+Tarhana|🥣|Bakliyat & Tahıl|g|0.1|
+Yumurta|🥚|Süt & Yumurta|adet|4|a
+Süt|🥛|Süt & Yumurta|ml|0.03|a
+Yoğurt|🥣|Süt & Yumurta|g|0.06|a
+Peynir|🧀|Süt & Yumurta|g|0.25|a
+Kaşar|🧀|Süt & Yumurta|g|0.3|a
+Lor peyniri|🧀|Süt & Yumurta|g|0.2|a
+Tereyağı|🧈|Süt & Yumurta|g|0.5|a
+Krema|🥛|Süt & Yumurta|ml|0.15|a
+Tavuk|🍗|Et & Balık|g|0.2|m
+Kıyma|🥩|Et & Balık|g|0.45|m
+Kuşbaşı et|🥩|Et & Balık|g|0.6|m
+Kuzu eti|🍖|Et & Balık|g|0.7|m
+Sucuk|🌭|Et & Balık|g|0.35|m
+Pastırma|🥓|Et & Balık|g|0.9|m
+Ton balığı|🐟|Et & Balık|adet|50|m
+Somon|🐟|Et & Balık|g|0.5|m
+Hamsi|🐟|Et & Balık|g|0.15|m
+Beyaz balık|🐟|Et & Balık|g|0.35|m
+Salça|🥫|Kiler|g|0.08|
+Zeytinyağı|🫒|Kiler|ml|0.3|
+Sıvı yağ|🛢️|Kiler|ml|0.08|
+Zeytin|🫒|Kiler|g|0.15|
+Bal|🍯|Kiler|g|0.3|a
+Pekmez|🍯|Kiler|g|0.15|
+Tahin|🥜|Kiler|g|0.25|
+Reçel|🍓|Kiler|g|0.12|
+Ceviz|🌰|Kiler|g|0.5|
+Badem|🌰|Kiler|g|0.7|
+Sirke|🍾|Kiler|ml|0.05|
+Turşu|🥒|Kiler|g|0.05|
