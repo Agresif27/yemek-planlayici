@@ -42,11 +42,11 @@ Pırasa Çorbası|🥬|30|12|Pırasa:150,Patates:60,Süt:80,Soğan:0.2|Sebzeleri
 Düğün Çorbası|🥣|45|12|Kuşbaşı et:50,Un:15,Yumurta:0.5,Yoğurt:50,Tereyağı:10|Eti haşlayın.;Un, yumurta ve yoğurtla terbiye edin.
 Şehriye Çorbası|🍜|20|12|Şehriye:30,Domates:80,Sıvı yağ:10|Şehriyeyi kavurun.;Domates ve su ekleyip pişirin.
 Tavuk Suyu Çorba|🍜|35|12|Tavuk:60,Şehriye:25,Havuç:30,Limon:0.25|Tavuğu haşlayın.;Şehriye ve havuç ekleyin, limonla servis edin.
-Yeşil Mercimek Yemeği|🫘|40|12|Yeşil mercimek:80,Soğan:0.5,Salça:10,Sıvı yağ:10|Soğan ve salçayı kavurun.;Mercimek ve su ekleyip pişirin.
-Barbunya Pilaki|🫘|45|12|Barbunya:80,Soğan:0.5,Havuç:40,Patates:50,Zeytinyağı:15|Sebzeleri zeytinyağında kavurun.;Barbunya ve su ekleyip kısık ateşte pişirin.
-Nohut Yemeği|🫘|50|12|Nohut:80,Soğan:0.5,Salça:10,Sıvı yağ:10|Soğan ve salçayı kavurun.;Haşlanmış nohut ve su ekleyip pişirin.
-Taze Fasulye (Zeytinyağlı)|🫛|40|12|Taze fasulye:150,Domates:80,Soğan:0.5,Zeytinyağı:15|Soğanı zeytinyağında kavurun.;Fasulye ve domates ekleyip pişirin.
-Etli Taze Fasulye|🫛|50|2|Taze fasulye:150,Kuşbaşı et:80,Domates:80,Soğan:0.5|Eti soğanla kavurun.;Fasulye ve domates ekleyip pişirin.
+Yeşil Mercimek Yemeği|🥜|40|12|Yeşil mercimek:80,Soğan:0.5,Salça:10,Sıvı yağ:10|Soğan ve salçayı kavurun.;Mercimek ve su ekleyip pişirin.
+Barbunya Pilaki|🥜|45|12|Barbunya:80,Soğan:0.5,Havuç:40,Patates:50,Zeytinyağı:15|Sebzeleri zeytinyağında kavurun.;Barbunya ve su ekleyip kısık ateşte pişirin.
+Nohut Yemeği|🥜|50|12|Nohut:80,Soğan:0.5,Salça:10,Sıvı yağ:10|Soğan ve salçayı kavurun.;Haşlanmış nohut ve su ekleyip pişirin.
+Taze Fasulye (Zeytinyağlı)|🌱|40|12|Taze fasulye:150,Domates:80,Soğan:0.5,Zeytinyağı:15|Soğanı zeytinyağında kavurun.;Fasulye ve domates ekleyip pişirin.
+Etli Taze Fasulye|🌱|50|2|Taze fasulye:150,Kuşbaşı et:80,Domates:80,Soğan:0.5|Eti soğanla kavurun.;Fasulye ve domates ekleyip pişirin.
 Bamya (Zeytinyağlı)|🥒|40|12|Bamya:150,Domates:80,Soğan:0.5,Zeytinyağı:15,Limon:0.25|Bamyaları sirkede bekletip haşlayın.;Soğan ve domatesle pişirin.
 Etli Bamya|🥒|55|2|Bamya:150,Kuşbaşı et:80,Domates:60,Soğan:0.5|Eti soğanla pişirin.;Bamya ve domates ekleyip pişirin.
 Pırasa (Zeytinyağlı)|🥬|35|12|Pırasa:200,Havuç:40,Pirinç:20,Zeytinyağı:15|Pırasa ve havucu zeytinyağında kavurun.;Pirinç ve su ekleyip pişirin.
@@ -59,9 +59,9 @@ Zeytinyağlı Lahana|🥬|35|12|Lahana:250,Havuç:40,Soğan:0.3,Zeytinyağı:15,
 Pazı Yemeği|🥬|35|12|Pazı:200,Soğan:0.3,Bulgur:30,Sıvı yağ:10|Soğanı kavurup pazıyı ekleyin.;Bulgur ve su ekleyip pişirin.
 Pazı Kavurması|🥬|20|12|Pazı:200,Yumurta:1,Soğan:0.3|Soğan ve pazıyı kavurun.;Yumurta ekleyip karıştırın.
 Kereviz Yemeği|🥕|45|12|Kereviz:200,Havuç:50,Patates:50,Zeytinyağı:15,Limon:0.25|Sebzeleri zeytinyağında kavurun.;Su ekleyip pişirin.
-Bezelye Yemeği|🫛|35|12|Bezelye:150,Havuç:50,Patates:50,Soğan:0.3,Sıvı yağ:10|Sebzeleri kavurun.;Bezelye ve su ekleyip pişirin.
-Etli Bezelye|🫛|50|2|Bezelye:150,Kuşbaşı et:70,Havuç:40,Soğan:0.3|Eti soğanla kavurun.;Bezelye ve havuç ekleyip pişirin.
-Kıymalı Bezelye|🫛|35|12|Bezelye:150,Kıyma:60,Soğan:0.3,Domates:60|Kıymayı soğanla kavurun.;Bezelye ve domates ekleyip pişirin.
+Bezelye Yemeği|🌱|35|12|Bezelye:150,Havuç:50,Patates:50,Soğan:0.3,Sıvı yağ:10|Sebzeleri kavurun.;Bezelye ve su ekleyip pişirin.
+Etli Bezelye|🌱|50|2|Bezelye:150,Kuşbaşı et:70,Havuç:40,Soğan:0.3|Eti soğanla kavurun.;Bezelye ve havuç ekleyip pişirin.
+Kıymalı Bezelye|🌱|35|12|Bezelye:150,Kıyma:60,Soğan:0.3,Domates:60|Kıymayı soğanla kavurun.;Bezelye ve domates ekleyip pişirin.
 Mısırlı Pilav|🌽|25|12|Pirinç:70,Mısır:60,Sıvı yağ:10|Pirinci kavurun.;Mısır ve su ekleyip pişirin.
 Sebzeli Pilav|🍚|30|12|Pirinç:70,Havuç:40,Bezelye:40,Sıvı yağ:10|Sebzeleri kavurup pirinç ekleyin.;Su ile pişirin.
 Domatesli Pilav|🍚|25|12|Pirinç:80,Domates:80,Salça:5,Sıvı yağ:10|Pirinci kavurun.;Domates ve su ekleyip pişirin.

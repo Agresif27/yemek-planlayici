@@ -81,7 +81,7 @@ Sucuklu Lavaş Dürüm|🌯|10|0|Lavaş:1,Sucuk:40,Kaşar:30|Sucuğu kızartıp 
 Avokadolu Lavaş|🥑|8|0|Lavaş:1,Avokado:0.5,Domates:50,Roka:20|Avokadoyu ezip lavaşa sürün.;Domates ve rokayı ekleyip sarın.
 Pastırmalı Kaşarlı Tost|🥪|10|0|Ekmek:2,Pastırma:30,Kaşar:30|Ekmek arasına pastırma ve kaşar koyup tostlayın.
 Rokalı Peynirli Tost|🥪|10|0|Ekmek:2,Peynir:40,Roka:20,Domates:40|Ekmek arasına peynir, roka ve domates koyup tostlayın.
-Humus Kahvaltı|🫘|10|0|Nohut:60,Tahin:20,Limon:0.25,Sarımsak:0.3,Zeytinyağı:10,Ekmek:1|Nohut, tahin, limon ve sarımsağı blenderdan geçirin.;Zeytinyağı gezdirip ekmekle yiyin.
+Humus Kahvaltı|🥜|10|0|Nohut:60,Tahin:20,Limon:0.25,Sarımsak:0.3,Zeytinyağı:10,Ekmek:1|Nohut, tahin, limon ve sarımsağı blenderdan geçirin.;Zeytinyağı gezdirip ekmekle yiyin.
 Zeytin Ezmeli Ekmek|🫒|5|0|Ekmek:2,Zeytin:50,Zeytinyağı:5,Ceviz:10|Zeytin ve cevizi ezip zeytinyağıyla karıştırın.;Ekmeğe sürün.
 Cevizli Peynirli Ekmek|🧀|5|0|Ekmek:2,Peynir:40,Ceviz:15|Ekmeğe peynir ve ceviz koyun.
 Kaşar Tava|🧀|10|0|Kaşar:80,Domates:60,Ekmek:1|Kaşarı tavada eritin.;Domates ve ekmekle servis edin.

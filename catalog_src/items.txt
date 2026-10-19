@@ -14,8 +14,8 @@ Marul|🥬|Sebze|g|0.04|
 Karnabahar|🥦|Sebze|g|0.04|
 Lahana|🥬|Sebze|g|0.025|
 Pırasa|🥬|Sebze|g|0.04|
-Bezelye|🫛|Sebze|g|0.06|
-Taze fasulye|🫛|Sebze|g|0.08|
+Bezelye|🌱|Sebze|g|0.06|
+Taze fasulye|🌱|Sebze|g|0.08|
 Bamya|🥒|Sebze|g|0.15|
 Pazı|🥬|Sebze|g|0.035|
 Kereviz|🥬|Sebze|g|0.04|
@@ -31,11 +31,11 @@ Kuru üzüm|🍇|Meyve|g|0.2|
 Pirinç|🍚|Bakliyat & Tahıl|g|0.06|
 Bulgur|🌾|Bakliyat & Tahıl|g|0.04|
 Makarna|🍝|Bakliyat & Tahıl|g|0.035|
-Mercimek|🫘|Bakliyat & Tahıl|g|0.07|
-Yeşil mercimek|🫘|Bakliyat & Tahıl|g|0.07|
-Nohut|🫘|Bakliyat & Tahıl|g|0.08|
-Kuru fasulye|🫘|Bakliyat & Tahıl|g|0.08|
-Barbunya|🫘|Bakliyat & Tahıl|g|0.08|
+Mercimek|🥜|Bakliyat & Tahıl|g|0.07|
+Yeşil mercimek|🥜|Bakliyat & Tahıl|g|0.07|
+Nohut|🥜|Bakliyat & Tahıl|g|0.08|
+Kuru fasulye|🥜|Bakliyat & Tahıl|g|0.08|
+Barbunya|🥜|Bakliyat & Tahıl|g|0.08|
 Ekmek|🍞|Bakliyat & Tahıl|adet|8|
 Lavaş|🫓|Bakliyat & Tahıl|adet|6|
 Yufka|🫓|Bakliyat & Tahıl|adet|7|

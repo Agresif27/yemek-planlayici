@@ -13,7 +13,11 @@ final messengerKey = GlobalKey<ScaffoldMessengerState>();
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Catalog.load();
-  await state.load();
+  try {
+    await state.load();
+  } catch (_) {
+    // Kayıtlı veri okunamazsa uygulama yine de açılır (boş durumla).
+  }
   state.reconcile();
   runApp(const YemekApp());
   // Arka planda yeni tarif kataloğu var mı diye bak; internet yoksa sessizce geç.
